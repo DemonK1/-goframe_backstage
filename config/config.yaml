@@ -1,0 +1,26 @@
+server:
+  address:     ":8899"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+logger:
+  level : "all"
+  stdout: true
+  stdoutColorDisabled: true # 是否开启终端的颜色打印
+
+# 数据库配置
+database:
+  default:
+    link: "mysql:root:root@tcp(127.0.0.1:3306)/_goframe_web?charset=utf8mb4&parseTime=True"
+    debug: true
+    CreatedAt: "create_time"
+    UpdatedAt: "update_time"
+    DeletedAt: "delete_time"
+
+gToken:
+  # 缓存模式 1 gcache 2 gredis
+  CacheMode: 1
+  # 是否支持多端登录
+  MultiLogin: true
+  # 超时时间
+  Timeout: 0
